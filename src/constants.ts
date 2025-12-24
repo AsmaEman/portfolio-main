@@ -12,57 +12,58 @@ export const linksInfo = [
 export const projectsData: ProjectType[] = [
   {
     imgSrc: "src/assets/ukrify.png",
-    imgAlt: "Intelligent Inspection System banner",
+    imgAlt: "Carpools Community Carpooling Platform banner",
     number: 1,
-    title: "Intelligent Inspection System (Fintech + IoT)",
-    description: "Led a 4-member engineering team to build a real-time inspection dashboard for field operations. Implemented 95% unit test coverage and automated E2E workflows with Cypress. Designed micro front-end patterns to scale modules independently. Used Angular, .NET Core, SQL, Jest, and Cypress to create a robust system that improved operational efficiency.",
-    demo: "#",
-    github: "#",
+    title: "Carpools - Community Carpooling Platform",
+    description: "A comprehensive community-focused carpooling platform built with React + Capacitor for native iOS/Android packaging. Unlike traditional ride-sharing apps, this platform emphasizes building reliable, long-term commuting communities with features like driver rotation, flexible cost-sharing, and enterprise-grade security. Includes admin dashboard, route planning system, and advanced matching algorithms.",
+    demo: "https://carpool-community-share.vercel.app/",
+    github: "https://github.com/AsmaEman/carpool-community-share",
     technologies: [
-      "Angular",
-      ".NET Core",
-      "SQL",
-      "Jest",
-      "Cypress",
-      "Microservices"
+      "React",
+      "TypeScript",
+      "Capacitor",
+      "Supabase",
+      "Tailwind CSS",
+      "iOS/Android"
     ],
     ariaLabel: {
-      demo: "View Intelligent Inspection System live demo",
-      github: "View Intelligent Inspection System project source code on GitHub"
+      demo: "View Carpools Community Platform live demo",
+      github: "View Carpools Community Platform project source code on GitHub"
     }
   },
   {
     imgSrc: "src/assets/quickquiz1.png",
-    imgAlt: "AI Police Reporting Platform screenshot",
+    imgAlt: "Mufradat Arabic Learning Platform screenshot",
     number: 2,
-    title: "AI-Assisted Police Reporting Platform",
-    description: "Built a modular reporting system with dynamic workflows reducing data-entry errors by 40%. Integrated custom GPT pipelines to auto-extract legal sections & penal codes, saving 20+ hours/month. Demonstrated application of intelligent systems in public-sector automation using Next.js, Python APIs, and ChatGPT Integration.",
-    demo: "#",
-    github: "#",
+    title: "Mufradat - Arabic Vocabulary Learning Platform",
+    description: "An innovative, interactive platform for mastering Arabic vocabulary and conversation skills. Features comprehensive vocabulary management, interactive learning modules, progress tracking, and gamified learning experience. Built with modern React architecture, state management, and responsive UI components to provide an engaging educational experience for Arabic language learners.",
+    demo: "https://vocabulary-learner-red.vercel.app/",
+    github: "https://github.com/AsmaEman/Mufradat",
     technologies: [
+      "React",
       "Next.js",
-      "Python APIs",
-      "ChatGPT Integration",
-      "GPT Pipelines",
-      "Automation"
+      "TypeScript",
+      "Tailwind CSS",
+      "State Management",
+      "Educational Tech"
     ],
     ariaLabel: {
-      demo: "View AI Police Reporting Platform live demo",
-      github: "View AI Police Reporting Platform project source code on GitHub"
+      demo: "View Mufradat Arabic Learning Platform live demo",
+      github: "View Mufradat Arabic Learning Platform project source code on GitHub"
     }
   },
   {
     imgSrc: "src/assets/resumeLight.png",
-    imgAlt: "Distributed Data Pipeline screenshot",
+    imgAlt: "Quantum Intelligence Console screenshot",
     number: 3,
-    title: "Distributed Data Pipeline for Real-Time Analytics",
-    description: "Implemented a mini data pipeline using Kafka + Python + PostgreSQL. Streamed synthetic sensor data, applied transformations, and built a monitoring dashboard. Explored event-driven architecture, consumer groups, and fault tolerance. This project demonstrates expertise in real-time data processing and distributed systems architecture.",
-    demo: "#",
-    github: "#",
-    technologies: ["Kafka", "Python", "PostgreSQL", "Real-time Processing", "Event-driven Architecture"],
+    title: "Quantum Intelligence Console (QIC)",
+    description: "Advanced Next.js frontend dashboard application for AI/ML intelligence & analytics. Enterprise-grade platform featuring real-time data visualization, text-to-speech capabilities, OCR processing, and intelligent data grid management. Integrates Material-UI, Redux Toolkit, ApexCharts, TensorFlow.js, and Auth0 for comprehensive AI/ML data management and monitoring.",
+    demo: "https://qic-frontend-main.vercel.app",
+    github: "https://github.com/AsmaEman/Quantum-Intelligence-Console",
+    technologies: ["Next.js", "Material-UI", "Redux Toolkit", "TensorFlow.js", "ApexCharts", "AI/ML"],
     ariaLabel: {
-      demo: "View Distributed Data Pipeline live demo",
-      github: "View Distributed Data Pipeline project source code on GitHub"
+      demo: "View Quantum Intelligence Console live demo",
+      github: "View Quantum Intelligence Console project source code on GitHub"
     }
   },
   {

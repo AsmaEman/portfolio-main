@@ -20,7 +20,7 @@ const myProjectsData: MyProjectType[] = [
     number: "01",
     title: "Agent-less IoT Security: Network-Based Anomaly Detection",
     description: "Detecting anomalous behavior in IoT devices without installing endpoint agents. Traditional IoT security requires agents, which is infeasible for low-power or legacy hardware and creates a visibility gap. I built an agent-less IoT security pipeline that converts PCAP captures into engineered features, evaluates ML models (Random Forest chosen), and serves real-time attack classifications via a Flask dashboard. The system detects 4 attack types (DoS, SlowITe, Brute Force, Malformed) and achieved 93.55% F1-score — designed for practical deployability in legacy and regulated environments.",
-    image: "/src/assets/quickquiz1.png", // Replace with actual project image
+    image: "/src/assets/quickquiz1.png",
     link: "#",
     githubLinks: [
       "https://github.com/AsmaEman/Agentless-Iot-Security",
@@ -34,7 +34,7 @@ const myProjectsData: MyProjectType[] = [
     number: "02",
     title: "Intelligent Inspection System (Fintech + IoT Context)",
     description: "Led a 4-member engineering team to build a real-time inspection dashboard for field operations. Implemented 95% unit test coverage and automated E2E workflows with Cypress. Designed micro front-end patterns to scale modules independently. Tech Stack: Angular, .NET Core, SQL, Jest, Cypress",
-    image: "/src/assets/ukrify.png", // Replace with actual project image
+    image: "/src/assets/ukrify.png",
     link: "#"
   },
   {
@@ -42,7 +42,7 @@ const myProjectsData: MyProjectType[] = [
     number: "03",
     title: "AI-Assisted Police Reporting Platform",
     description: "Built a modular reporting system with dynamic workflows reducing data-entry errors by 40%. Integrated custom GPT pipelines to auto-extract legal sections & penal codes, saving 20+ hours/month. Demonstrated application of intelligent systems in public-sector automation. Tech Stack: Next.js, Python APIs, ChatGPT Integration",
-    image: "/src/assets/portfolio.png", // Replace with actual project image
+    image: "/src/assets/portfolio.png",
     link: "#"
   },
   {
@@ -50,7 +50,7 @@ const myProjectsData: MyProjectType[] = [
     number: "04",
     title: "Large-Scale Financial Dashboard",
     description: "Designed a system to process and display large financial datasets in real-time. Applied caching strategies, query optimization, and data batching for high concurrency. Improved system stability and reduced response time by 25%.",
-    image: "/src/assets/quickquiz2.png", // Replace with actual project image
+    image: "/src/assets/quickquiz2.png",
     link: "#"
   },
   {
@@ -58,7 +58,7 @@ const myProjectsData: MyProjectType[] = [
     number: "05",
     title: "Algorithmic Optimization Project (Academic)",
     description: "Used graph algorithms, dynamic programming, and greedy strategies to optimize route planning and resource allocation. Implemented time-complexity analysis and performance tests using Python. Demonstrates foundation in algorithms.",
-    image: "/src/assets/resumeLight.png", // Replace with actual project image
+    image: "/src/assets/resumeLight.png",
     link: "#"
   }
 ];
