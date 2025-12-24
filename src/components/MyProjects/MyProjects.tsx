@@ -1,0 +1,221 @@
+import { motion } from "motion/react";
+import LinkIcon from "../../assets/link.svg?react";
+import { useCursorHover } from "../../hooks/useCursorHover";
+
+interface MyProjectType {
+  id: string;
+  number: string;
+  title: string;
+  description: string;
+  image: string;
+  link?: string;
+  githubLinks?: string[];
+  technologies?: string[];
+  role?: string;
+}
+
+const myProjectsData: MyProjectType[] = [
+  {
+    id: "agentless-iot-security",
+    number: "01",
+    title: "Agent-less IoT Security: Network-Based Anomaly Detection",
+    description: "Detecting anomalous behavior in IoT devices without installing endpoint agents. Traditional IoT security requires agents, which is infeasible for low-power or legacy hardware and creates a visibility gap. I built an agent-less IoT security pipeline that converts PCAP captures into engineered features, evaluates ML models (Random Forest chosen), and serves real-time attack classifications via a Flask dashboard. The system detects 4 attack types (DoS, SlowITe, Brute Force, Malformed) and achieved 93.55% F1-score — designed for practical deployability in legacy and regulated environments.",
+    image: "/src/assets/quickquiz1.png", // Replace with actual project image
+    link: "#",
+    githubLinks: [
+      "https://github.com/AsmaEman/Agentless-Iot-Security",
+      "https://github.com/AsmaEman/iot-security-dashboard"
+    ],
+    technologies: ["Python", "Machine Learning", "Network Traffic Analysis", "Flask"],
+    role: "Researcher & Developer"
+  },
+  {
+    id: "intelligent-inspection-system",
+    number: "02",
+    title: "Intelligent Inspection System (Fintech + IoT Context)",
+    description: "Led a 4-member engineering team to build a real-time inspection dashboard for field operations. Implemented 95% unit test coverage and automated E2E workflows with Cypress. Designed micro front-end patterns to scale modules independently. Tech Stack: Angular, .NET Core, SQL, Jest, Cypress",
+    image: "/src/assets/ukrify.png", // Replace with actual project image
+    link: "#"
+  },
+  {
+    id: "ai-assisted-police-reporting",
+    number: "03",
+    title: "AI-Assisted Police Reporting Platform",
+    description: "Built a modular reporting system with dynamic workflows reducing data-entry errors by 40%. Integrated custom GPT pipelines to auto-extract legal sections & penal codes, saving 20+ hours/month. Demonstrated application of intelligent systems in public-sector automation. Tech Stack: Next.js, Python APIs, ChatGPT Integration",
+    image: "/src/assets/portfolio.png", // Replace with actual project image
+    link: "#"
+  },
+  {
+    id: "large-scale-financial-dashboard",
+    number: "04",
+    title: "Large-Scale Financial Dashboard",
+    description: "Designed a system to process and display large financial datasets in real-time. Applied caching strategies, query optimization, and data batching for high concurrency. Improved system stability and reduced response time by 25%.",
+    image: "/src/assets/quickquiz2.png", // Replace with actual project image
+    link: "#"
+  },
+  {
+    id: "algorithmic-optimization-project",
+    number: "05",
+    title: "Algorithmic Optimization Project (Academic)",
+    description: "Used graph algorithms, dynamic programming, and greedy strategies to optimize route planning and resource allocation. Implemented time-complexity analysis and performance tests using Python. Demonstrates foundation in algorithms.",
+    image: "/src/assets/resumeLight.png", // Replace with actual project image
+    link: "#"
+  }
+];
+
+export default function MyProjects() {
+  const { handleMouseEnter, handleMouseLeave } = useCursorHover();
+
+  return (
+    <section className="bg-black px-4 py-16 sm:px-6 sm:py-20 md:px-15 md:py-24 xl:px-28">
+      <div className="mx-auto max-w-7xl">
+        {/* Section Title */}
+        <motion.h2
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-16 text-center text-4xl font-normal text-white md:text-5xl lg:text-6xl"
+        >
+          My <span className="font-bold">Case Studies</span>
+        </motion.h2>
+
+        {/* Projects Grid */}
+        <div className="space-y-20 md:space-y-32">
+          {myProjectsData.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className={`grid items-center gap-8 md:gap-12 lg:grid-cols-2 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                }`}
+            >
+              {/* Project Image */}
+              <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                <div className="relative overflow-hidden rounded-2xl">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                    onMouseEnter={() => handleMouseEnter(150)}
+                    onMouseLeave={() => handleMouseLeave(40)}
+                  />
+                </div>
+              </div>
+
+              {/* Project Content */}
+              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                {/* Project Number */}
+                <div className="text-6xl font-bold text-white/20 md:text-8xl">
+                  {project.number}
+                </div>
+
+                {/* Project Title */}
+                <h3 className="text-2xl font-bold text-white md:text-3xl lg:text-4xl">
+                  {project.title}
+                </h3>
+
+                {/* Role */}
+                {project.role && (
+                  <p className="text-gray-300 text-sm font-medium">
+                    Role: {project.role}
+                  </p>
+                )}
+
+                {/* Project Description */}
+                <p
+                  className="text-gray-400 leading-relaxed md:text-lg"
+                  onMouseEnter={() => handleMouseEnter(150)}
+                  onMouseLeave={() => handleMouseLeave(40)}
+                >
+                  {project.description}
+                </p>
+
+                {/* Technologies */}
+                {project.technologies && (
+                  <div className="space-y-2">
+                    <p className="text-gray-300 text-sm font-medium">Tech:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Action Buttons */}
+                <div className="flex flex-wrap gap-4 pt-4">
+                  {/* Details Button */}
+                  <button
+                    onClick={() => {
+                      // TODO: Add link here later
+                      console.log('View details for:', project.id);
+                    }}
+                    className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-gray-200 hover:scale-105"
+                    onMouseEnter={() => handleMouseEnter(80)}
+                    onMouseLeave={() => handleMouseLeave(40)}
+                  >
+                    <span>View Details</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+
+                  {/* Blog Post Button */}
+                  <button
+                    className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-white hover:text-black hover:scale-105"
+                    onMouseEnter={() => handleMouseEnter(80)}
+                    onMouseLeave={() => handleMouseLeave(40)}
+                  >
+                    <span>Blog Post</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                  </button>
+
+                  {/* GitHub Links */}
+                  {project.githubLinks && project.githubLinks.map((githubLink, linkIndex) => (
+                    <a
+                      key={linkIndex}
+                      href={githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-gray-700 hover:scale-105"
+                      onMouseEnter={() => handleMouseEnter(80)}
+                      onMouseLeave={() => handleMouseLeave(40)}
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                      </svg>
+                      <span>GitHub {linkIndex === 0 ? 'Research' : 'Dashboard'}</span>
+                    </a>
+                  ))}
+
+                  {/* Regular Project Link */}
+                  {project.link && !project.githubLinks && (
+                    <a
+                      href={project.link}
+                      className="inline-flex items-center gap-2 text-white transition-colors hover:text-gray-300"
+                      onMouseEnter={() => handleMouseEnter(80)}
+                      onMouseLeave={() => handleMouseLeave(40)}
+                    >
+                      <LinkIcon className="h-5 w-5" />
+                      <span className="text-sm font-medium">View Project</span>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

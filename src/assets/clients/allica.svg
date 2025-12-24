@@ -1,0 +1,6 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5" y="8" width="110" height="24" rx="4" fill="#FF6B35"/>
+  <text x="35" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">allica</text>
+  <text x="85" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="300">BANK</text>
+  <circle cx="15" cy="20" r="4" fill="white"/>
+</svg>

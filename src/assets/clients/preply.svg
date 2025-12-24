@@ -1,0 +1,5 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5" y="8" width="110" height="24" rx="12" fill="#7B68EE"/>
+  <text x="60" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="600">Preply</text>
+  <circle cx="15" cy="20" r="3" fill="white"/>
+</svg>
