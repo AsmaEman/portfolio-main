@@ -4,10 +4,10 @@ import { useCursorHover } from "../../hooks/useCursorHover";
 // Import client logos
 import pepsiLogo from "../../assets/clients/pepsi.svg";
 import preplyLogo from "../../assets/clients/preply.png";
-import tamimiLogo from "../../assets/clients/tamimi.png";
+import tamimiLogo from "../../assets/clients/Tamimi.png";
 import allicaLogo from "../../assets/clients/allica.svg";
 import ikeaLogo from "../../assets/clients/ikea.svg";
-import ikanoLogo from "../../assets/clients/ikano.svg";
+import ikanoLogo from "../../assets/clients/Ikano.svg";
 
 interface ClientType {
   name: string;
