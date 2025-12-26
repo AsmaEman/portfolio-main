@@ -96,6 +96,7 @@ export default function Clients() {
                 <img
                   src={client.logo}
                   alt={client.alt}
+                  loading="lazy"
                   className="max-h-full max-w-full object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
                 />
               </div>

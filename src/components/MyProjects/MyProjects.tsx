@@ -118,6 +118,7 @@ export default function MyProjects() {
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                     onMouseEnter={() => handleMouseEnter(150)}
                     onMouseLeave={() => handleMouseLeave(40)}
