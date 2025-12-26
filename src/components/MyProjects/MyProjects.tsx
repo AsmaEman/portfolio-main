@@ -3,11 +3,12 @@ import LinkIcon from "../../assets/link.svg?react";
 import { useCursorHover } from "../../hooks/useCursorHover";
 
 // Import images
-import quickquiz1 from "../../assets/quickquiz1.png";
-import ukrify from "../../assets/ukrify.png";
-import portfolio from "../../assets/portfolio.png";
-import quickquiz2 from "../../assets/quickquiz2.png";
-import resumeLight from "../../assets/resumeLight.png";
+import quickquiz1 from "../../assets/Gem2.png";
+import ukrify from "../../assets/Gem1.png";
+import portfolio from "../../assets/Gem3.png";
+// Commented out unused imports
+// import quickquiz2 from "../../assets/quickquiz2.png";
+// import resumeLight from "../../assets/resumeLight.png";
 
 interface MyProjectType {
   id: string;
@@ -39,7 +40,7 @@ const myProjectsData: MyProjectType[] = [
   {
     id: "ai-assisted-police-reporting",
     number: "02",
-    title: "AI-Powered Police Report Automation System",
+    title: "ML-Based Police Report Automation System",
     description: "Developed an AI-powered police report automation system using NLP and ML to streamline law enforcement workflows. Implemented 5 ML models (DistilBERT, BERT) achieving 95% entity recognition accuracy and 92% penal code matching accuracy. Built full-stack application reducing report generation time by 77%. Processed CALCRIM legal database with 1000+ pages for automated code extraction.",
     image: ukrify,
     link: "#",
@@ -62,23 +63,24 @@ const myProjectsData: MyProjectType[] = [
     ],
     technologies: ["Python", "TensorFlow", "Keras", "Flask", "NumPy", "Pandas", "OpenCV"],
     role: "AI/ML Engineer & Medical AI Researcher"
-  },
-  {
-    id: "large-scale-financial-dashboard",
-    number: "04",
-    title: "Large-Scale Financial Dashboard",
-    description: "Designed a system to process and display large financial datasets in real-time. Applied caching strategies, query optimization, and data batching for high concurrency. Improved system stability and reduced response time by 25%.",
-    image: quickquiz2,
-    link: "#"
-  },
-  {
-    id: "algorithmic-optimization-project",
-    number: "05",
-    title: "Algorithmic Optimization Project (Academic)",
-    description: "Used graph algorithms, dynamic programming, and greedy strategies to optimize route planning and resource allocation. Implemented time-complexity analysis and performance tests using Python. Demonstrates foundation in algorithms.",
-    image: resumeLight,
-    link: "#"
   }
+  // Commented out additional projects as requested
+  // {
+  //   id: "large-scale-financial-dashboard",
+  //   number: "04",
+  //   title: "Large-Scale Financial Dashboard",
+  //   description: "Designed a system to process and display large financial datasets in real-time. Applied caching strategies, query optimization, and data batching for high concurrency. Improved system stability and reduced response time by 25%.",
+  //   image: quickquiz2,
+  //   link: "#"
+  // },
+  // {
+  //   id: "algorithmic-optimization-project",
+  //   number: "05",
+  //   title: "Algorithmic Optimization Project (Academic)",
+  //   description: "Used graph algorithms, dynamic programming, and greedy strategies to optimize route planning and resource allocation. Implemented time-complexity analysis and performance tests using Python. Demonstrates foundation in algorithms.",
+  //   image: resumeLight,
+  //   link: "#"
+  // }
 ];
 
 export default function MyProjects() {
@@ -173,8 +175,20 @@ export default function MyProjects() {
                   {/* Details Button */}
                   <button
                     onClick={() => {
-                      // TODO: Add link here later
-                      console.log('View details for:', project.id);
+                      let url = "#";
+                      if (project.id === "agentless-iot-security") {
+                        url = "https://case-studies-site.vercel.app/iot-security";
+                      } else if (project.id === "ai-assisted-police-reporting") {
+                        url = "https://case-studies-site.vercel.app/police-report";
+                      } else if (project.id === "ai-skin-cancer-detection") {
+                        url = "https://case-studies-site.vercel.app/skin-cancer";
+                      }
+
+                      if (url !== "#") {
+                        window.open(url, '_blank');
+                      } else {
+                        console.log('View details for:', project.id);
+                      }
                     }}
                     className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-gray-200 hover:scale-105"
                     onMouseEnter={() => handleMouseEnter(80)}

@@ -37,11 +37,11 @@ export default function Contact() {
             <p className="flex items-center transition-all duration-300 hover:pl-3">
               <EmailIcon className="mr-3 h-5 w-5" />
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=liubynets.nataliia@gmail.com&su=Connect%20Request&body=Hi%2C%20Nataliia%21"
+                href="mailto:asmaeman92@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                liubynets.nataliia@gmail.com
+                asmaeman92@gmail.com
               </a>
             </p>
           </div>

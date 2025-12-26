@@ -3,10 +3,11 @@ import { useCursorHover } from "../../hooks/useCursorHover";
 
 // Import client logos
 import pepsiLogo from "../../assets/clients/pepsi.svg";
-import preplyLogo from "../../assets/clients/preply.svg";
-import tamimiLogo from "../../assets/clients/tamimi.svg";
+import preplyLogo from "../../assets/clients/preply.png";
+import tamimiLogo from "../../assets/clients/tamimi.png";
 import allicaLogo from "../../assets/clients/allica.svg";
 import ikeaLogo from "../../assets/clients/ikea.svg";
+import ikanoLogo from "../../assets/clients/ikano.svg";
 
 interface ClientType {
   name: string;
@@ -39,6 +40,11 @@ const clientsData: ClientType[] = [
     name: "IKEA",
     logo: ikeaLogo,
     alt: "IKEA logo"
+  },
+  {
+    name: "IKANO",
+    logo: ikanoLogo,
+    alt: "IKANO logo"
   }
 ];
 

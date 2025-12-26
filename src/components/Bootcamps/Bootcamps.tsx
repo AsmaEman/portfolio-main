@@ -16,112 +16,52 @@ interface BootcampType {
 
 const bootcampsData: BootcampType[] = [
   {
-    id: "data-engineering-bootcamp",
-    title: "Data Engineering Bootcamp",
-    provider: "Atomcamp & DataExpert.io",
-    duration: "6 Months",
-    year: "2023",
-    description: "Comprehensive data engineering program covering ETL pipelines, Kafka, Hadoop, Spark, and real-time data processing. Built scalable data systems and learned advanced data engineering practices.",
-    skills: ["ETL Pipelines", "Kafka", "Hadoop", "Spark", "Data Processing", "Python"],
-    certificate: "#",
-    icon: "🔧",
+    id: "genai-bootcamp-exampro",
+    title: "GenAI Bootcamp",
+    provider: "ExamPro",
+    duration: "3 Months",
+    year: "2025",
+    description: "Comprehensive 65-hour Generative AI bootcamp covering foundational concepts, LLMs, prompt engineering, and AI application development. Created by Andrew Brown from ExamPro with 30+ guest instructors, this immersive program provides hands-on experience with cutting-edge GenAI technologies and practical implementation strategies.",
+    skills: ["Generative AI", "Large Language Models", "Prompt Engineering", "AI Applications", "Machine Learning", "Deep Learning"],
+    certificate: "https://www.linkedin.com/in/asmaeman/details/certifications/1745517519945/single-media-viewer/?profileId=ACoAAC511yIBm2ppk18FO2n0FUGymkOo0A8P8Y8",
+    icon: "🤖",
     color: "#3B82F6"
   },
   {
-    id: "ibm-data-engineering",
-    title: "IBM Data Engineering Certificate",
-    provider: "Coursera - IBM",
-    duration: "4 Months",
-    year: "2023",
-    description: "Professional certificate covering data engineering fundamentals, database design, ETL processes, and cloud data platforms. Gained hands-on experience with IBM Cloud and data engineering tools.",
-    skills: ["Data Engineering", "ETL", "Cloud Platforms", "Database Design", "IBM Cloud"],
-    certificate: "#",
-    icon: "📊",
+    id: "data-engineering-dataexpert",
+    title: "Data Engineering Certification",
+    provider: "DataExpert.io",
+    duration: "3 Months",
+    year: "2025",
+    description: "Intensive data engineering bootcamp covering Spark, Flink, advanced data modeling, and modern data engineering practices. Focused on transitioning from junior to senior data engineer with hands-on projects and real-world applications. Covers cumulative table design, data pipeline architecture, and high-trust data systems.",
+    skills: ["Apache Spark", "Apache Flink", "Data Modeling", "Data Pipelines", "ETL", "Data Engineering"],
+    certificate: "https://www.dataexpert.io/certification/asmaeman9253939/yt-bootcamp-completion",
+    icon: "🔧",
     color: "#06B6D4"
   },
   {
-    id: "google-data-analytics",
-    title: "Google Data Analytics Professional Certificate",
-    provider: "Coursera - Google",
-    duration: "3 Months",
-    year: "2022",
-    description: "Comprehensive data analytics program covering data collection, cleaning, analysis, and visualization. Learned to use tools like SQL, R, and Tableau for data-driven decision making.",
-    skills: ["Data Analytics", "SQL", "R", "Tableau", "Data Visualization", "Statistics"],
-    certificate: "#",
-    icon: "📈",
+    id: "certified-professional-data-engineer",
+    title: "Certified Professional Data Engineer",
+    provider: "atomcamp",
+    duration: "6 Months",
+    year: "2024",
+    description: "Project-based data engineering bootcamp with hands-on exercises in enterprise-grade tools. Comprehensive training in big data technologies, cloud platforms, and data governance. Focused on building scalable data systems and implementing best practices for data engineering in production environments.",
+    skills: ["Hadoop", "Big Data", "PySpark", "Machine Learning Data Pipelines", "Apache Kafka", "Data Governance"],
+    certificate: "https://www.linkedin.com/in/asmaeman/details/certifications/1708712517476/single-media-viewer/?profileId=ACoAAC511yIBm2ppk18FO2n0FUGymkOo0A8P8Y8",
+    icon: "📊",
     color: "#F59E0B"
   },
   {
-    id: "meta-frontend",
-    title: "Meta Front-End Developer Certificate",
-    provider: "Coursera - Meta",
-    duration: "5 Months",
-    year: "2022",
-    description: "Professional certificate covering modern front-end development with React, responsive design, and user experience principles. Built multiple projects demonstrating proficiency in modern web development.",
-    skills: ["React", "JavaScript", "HTML/CSS", "Responsive Design", "UX/UI", "Version Control"],
-    certificate: "#",
-    icon: "⚛️",
-    color: "#8B5CF6"
-  },
-  {
-    id: "azure-fundamentals",
-    title: "Microsoft Azure Fundamentals (AZ-900)",
-    provider: "Microsoft Learn",
-    duration: "2 Months",
-    year: "2022",
-    description: "Cloud computing fundamentals covering Azure services, architecture patterns, security, and cost optimization. Gained foundational knowledge of Microsoft Azure cloud platform.",
-    skills: ["Azure", "Cloud Computing", "Cloud Architecture", "Security", "Cost Management"],
-    certificate: "#",
-    icon: "☁️",
-    color: "#0078D4"
-  },
-  {
-    id: "machine-learning-python",
-    title: "Machine Learning with Python",
-    provider: "IBM - Coursera",
-    duration: "3 Months",
+    id: "cybersecurity-tools-coursera",
+    title: "Introduction to Cybersecurity Tools & Cyber Attacks",
+    provider: "Coursera",
+    duration: "4 Weeks",
     year: "2021",
-    description: "Comprehensive machine learning course covering algorithms, model training, evaluation, and deployment using Python. Implemented various ML algorithms and worked on real-world datasets.",
-    skills: ["Machine Learning", "Python", "Scikit-learn", "Data Science", "Model Training"],
-    certificate: "#",
-    icon: "🤖",
-    color: "#10B981"
-  },
-  {
-    id: "algorithms-specialization",
-    title: "Algorithms Specialization",
-    provider: "Stanford - Coursera",
-    duration: "4 Months",
-    year: "2021",
-    description: "Advanced algorithms course covering graph algorithms, dynamic programming, greedy strategies, and complexity analysis. Developed strong foundation in algorithmic thinking and optimization.",
-    skills: ["Algorithms", "Data Structures", "Graph Theory", "Dynamic Programming", "Optimization"],
-    certificate: "#",
-    icon: "🧮",
+    description: "Foundational cybersecurity course covering fundamental concepts, threat analysis, and defensive measures. Provides comprehensive understanding of cyber attack vectors, security tools, and preventive strategies. Includes hands-on experience with cybersecurity tools and real-world threat scenarios.",
+    skills: ["Cybersecurity Fundamentals", "Threat Analysis", "Security Tools", "Risk Assessment", "Incident Response", "Network Security"],
+    certificate: "https://www.credly.com/badges/af2b4c1d-0e8b-4050-bef1-92fb14e35450?source=linked_in_profile",
+    icon: "🔒",
     color: "#EF4444"
-  },
-  {
-    id: "freecodecamp-fullstack",
-    title: "FreeCodeCamp Full Stack Developer",
-    provider: "FreeCodeCamp",
-    duration: "8 Months",
-    year: "2020-2021",
-    description: "Comprehensive full-stack development curriculum covering front-end and back-end technologies. Built multiple projects demonstrating proficiency in modern web development stack.",
-    skills: ["Full Stack", "JavaScript", "Node.js", "React", "MongoDB", "Express"],
-    certificate: "#",
-    icon: "🔥",
-    color: "#F97316"
-  },
-  {
-    id: "angular-architecture",
-    title: "Advanced Angular Architecture",
-    provider: "Udemy",
-    duration: "2 Months",
-    year: "2022",
-    description: "Advanced Angular course covering architecture patterns, performance optimization, state management, and enterprise-level application development. Learned best practices for scalable Angular applications.",
-    skills: ["Angular", "Architecture Patterns", "State Management", "Performance", "Enterprise Development"],
-    certificate: "#",
-    icon: "🅰️",
-    color: "#DD0031"
   }
 ];
 
@@ -268,20 +208,6 @@ export default function Bootcamps() {
                   </motion.div>
                 )}
               </div>
-
-              {/* Hover Border */}
-              <div
-                className="absolute inset-0 rounded-3xl border-2 border-transparent transition-all duration-300 group-hover:border-opacity-30"
-                style={{ borderColor: bootcamp.color }}
-              />
-
-              {/* Corner Accent */}
-              <motion.div
-                className="absolute bottom-6 right-6 h-3 w-3 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-60"
-                style={{ backgroundColor: bootcamp.color }}
-                whileHover={{ scale: 1.5 }}
-                transition={{ duration: 0.2 }}
-              />
             </motion.div>
           ))}
         </div>

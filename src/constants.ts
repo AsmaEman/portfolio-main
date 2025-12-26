@@ -10,9 +10,11 @@ export const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 export const linksInfo = [
   { title: "About", path: "#about" },
+  { title: "Experience", path: "#experience" },
   { title: "Skills", path: "#skills" },
+  { title: "Case Studies", path: "#case-studies" },
   { title: "Projects", path: "#projects" },
-  { title: "Contact", path: "#contact" }
+ 
 ];
 
 export const projectsData: ProjectType[] = [

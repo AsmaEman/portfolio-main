@@ -49,7 +49,7 @@ export default function Hero() {
           </p>
         </div>
         <p className="text-base/6 font-normal text-zinc-500">
-          Full-Stack Developer with 3+ years of experience designing scalable, data-driven, high-performance software systems across fintech, analytics, and enterprise domains. Proficient in Angular, React, Next.js, .NET, Python, SQL, cloud systems, ETL pipelines, and microservices architecture. Experienced in building real-time dashboards, distributed applications, AI-assisted automation tools, and optimized data processing pipelines.
+          Building reliable apps and AI-first data features that turn messy signals into clear decisions.
         </p>
         <div className="lg:mt-10">
           <SocialMedia />

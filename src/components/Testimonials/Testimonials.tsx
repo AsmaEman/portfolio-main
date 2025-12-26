@@ -4,7 +4,6 @@ import { useCursorHover } from "../../hooks/useCursorHover";
 // Import testimonial avatars
 import sarahAvatar from "../../assets/testimonials/sarah.jpg";
 import michaelAvatar from "../../assets/testimonials/michael.jpg";
-import davidAvatar from "../../assets/testimonials/david.jpg";
 
 interface TestimonialType {
   id: string;
@@ -17,28 +16,20 @@ interface TestimonialType {
 
 const testimonialsData: TestimonialType[] = [
   {
-    id: "netsol-manager",
-    name: "Sarah Ahmed",
-    role: "Engineering Manager at NETSOL",
-    testimonial: "Asma consistently delivered high-quality frontend solutions that improved our platform's performance by 30%. Her expertise in Angular and ability to mentor junior developers made her an invaluable team member.",
+    id: "sidra-cheema-pm",
+    name: "Sidra Cheema",
+    role: "Project Manager",
+    testimonial: "I had the pleasure of working with Asma Eman on contractual projects where she excelled as both a front-end and Python developer. Asma demonstrated remarkable commitment, a strong work ethic, and an exceptional ability to take feedback constructively. Whether working independently or as part of a team, she consistently delivered high-quality results. Her technical skills and collaborative spirit made her an invaluable asset to our projects. I highly recommend Asma for any role that requires dedication, adaptability, and technical expertise.",
     avatar: sarahAvatar,
     isHighlighted: false
   },
   {
-    id: "freelance-client",
-    name: "Michael Chen",
-    role: "CTO at Polix Analytics",
-    testimonial: "Working with Asma on our React + .NET Core analytics dashboard was exceptional. She reduced our reporting time by 30% and delivered exactly what we needed. Her technical skills and communication are top-notch.",
+    id: "ahmed-khalid-netsol",
+    name: "Ahmed Khalid",
+    role: "Tech Lead ",
+    testimonial: "During her time with us, Asma consistently demonstrated strong technical ability and professional maturity. She designed and implemented .NET C# REST APIs and integrated them seamlessly with our Angular frontend for a mission-critical asset management product. Her ETL improvements reduced processing bottlenecks and her dashboard work helped non-technical stakeholders explore financial data independently and confidently. Asma approaches problems with curiosity and persistence, communicates clearly across teams, and reliably follows projects through to completion. I wholeheartedly endorse her for any engineering role.",
     avatar: michaelAvatar,
     isHighlighted: true
-  },
-  {
-    id: "pepsico-lead",
-    name: "David Rodriguez",
-    role: "Tech Lead at PepsiCo",
-    testimonial: "Asma's work on automating our supply chain workflows was impressive. She quickly understood our business requirements and delivered solutions that reduced manual processes by 15%. Highly recommended!",
-    avatar: davidAvatar,
-    isHighlighted: false
   }
 ];
 
@@ -56,11 +47,11 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="mb-16 text-center text-4xl font-normal text-black md:text-5xl lg:text-6xl"
         >
-          My <span className="font-bold">Testimonial</span>
+          My <span className="font-bold">Testimonials</span>
         </motion.h2>
 
         {/* Testimonials Grid */}
-        <div className="grid gap-8 md:grid-cols-3 lg:gap-12">
+        <div className="grid gap-8 md:grid-cols-2 lg:gap-12 max-w-5xl mx-auto">
           {testimonialsData.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}

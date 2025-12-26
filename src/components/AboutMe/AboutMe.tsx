@@ -28,24 +28,32 @@ export default function AboutMe() {
             transition={{ duration: 1, type: "spring" }}
             viewport={{ once: true }}
           >
-            I am a Full-Stack Developer with 3+ years of experience designing scalable, data-driven, high-performance software systems across fintech, analytics, and enterprise domains. Currently pursuing BSc. Computer Engineering at University of Engineering & Technology (UET), Lahore, with a focus on Software Engineering, Algorithms, Distributed Systems, Databases, and Embedded Systems.
-          </motion.p>
+            I design and build software that bridges engineering, data, and product. My career spans product teams and freelance projects where I’ve focused on bringing structure to noisy operational data, creating APIs and ETL pipelines that power reliable dashboards, and shipping small, explainable ML signals that amplify human decision-making.
+I enjoy the full lifecycle: from turning a fuzzy product question into measurable features, to implementing pragmatic pipelines and dashboards, to iterating with users until the solution actually helps them do their job. That means thinking about architecture and testability, but also about clarity models and metrics should be understandable and actionable by the people who rely on them.
+
+                    </motion.p>
           <motion.p
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 2, type: "spring" }}
             viewport={{ once: true }}
           >
-            My technical expertise spans across modern web technologies including Angular, React, Next.js, TypeScript, JavaScript on the frontend, and .NET (C#, ASP.NET Core), Python (Flask, FastAPI) on the backend. I'm proficient in database technologies like SQL, PostgreSQL, MongoDB, Redis, and experienced with data engineering tools including ETL pipelines, Kafka, Hadoop, and Spark. My cloud and DevOps skills include REST APIs, Microservices Architecture, CI/CD pipelines, Docker, and GitHub Actions.
-          </motion.p>
+            As a freelancer I pair hands-on delivery with mentoring and knowledge transfer so teams can own and evolve what we build together. I like small, focused AI features that improve workflows (prioritization, alerting, recommendations) rather than ambitious end-to-end automation the goal is to amplify people, reduce toil, and make systems more trustworthy.
+              </motion.p>
           <motion.p
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 3, type: "spring" }}
             viewport={{ once: true }}
           >
-            At NETSOL Technologies, I designed scalable frontend architecture for fintech SaaS platforms, reducing UI load times by 30% and building real-time visualization systems used by 10,000+ global users. I've also worked as a freelance tech consultant, delivering 100+ structured tutoring sessions with a 4.9/5 rating and building full-stack analytics dashboards. My passion lies in building real-time dashboards, distributed data systems, and AI-assisted automation tools that solve real-world problems.
-          </motion.p>
+            What I do (services / focus areas)
+•	Full-stack product engineering (frontend, backend, APIs)
+•	Data & event pipelines, feature engineering for analytics and ML
+•	AI-assisted tooling: small, explainable models that fit operational workflows
+•	Internal dashboards and observability surfaces for non-technical stakeholders
+•	Technical mentoring, code quality, and developer enablement
+
+              </motion.p>
         </article>
       </div>
     </section>

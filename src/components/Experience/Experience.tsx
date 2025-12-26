@@ -14,34 +14,44 @@ interface ExperienceType {
 
 const experienceData: ExperienceType[] = [
   {
+    id: "fscai",
+    company: "FSC",
+    role: "Software Engineer — AI-Assisted Decisioning & Operational Intelligence",
+    period: "May 2025 – Present",
+    description: "I build AI-first features that turn noisy event streams and operational signals into actionable insights for real-time services. My work focuses on creating reliable data foundations, explainable ML signals, and workflows that help ops teams investigate and act quickly on exceptions. Designed end-to-end feature pipelines converting streaming events into stable, explainable signals. Developed AI-assisted workflows surfacing unusual patterns in routing, matching, and reconciliation flows. Built internal analytics surfaces blending rule-based checks with model-driven indicators for clear investigation context.",
+    logo: "F",
+    logoAlt: "FSCAI logo",
+    companyColor: "#6366F1"
+  },
+  {
     id: "netsol",
     company: "NETSOL Technologies",
-    role: "Software Developer",
-    period: "Jun 2022 - Mar 2025",
-    description: "Frontend Architecture (Angular): Designed scalable architecture for a fintech SaaS platform, reducing UI load times 30% through lazy loading, caching & optimization. Data-Driven Dashboards: Built real-time visualization systems improving reporting accuracy 25% and used by 10,000+ global users. API Engineering: Collaborated with backend teams to define efficient REST API contracts for large financial datasets. Code Quality & Mentorship: Conducted code reviews and mentored 3 junior developers, decreasing post-release defects by 40%. Agile Delivery: Planned and delivered over 15+ features across 2-week sprints ahead of deadlines.",
+    role: "Software Developer — Asset Management Platform ",
+    period: "Jun 2022 – Mar 2025",
+    description: "I contributed to a core asset-management platform across frontend, backend, and data pipelines, focusing on system reliability and usability for financial users. Designed and integrated .NET (C#) RESTful APIs with Angular frontend for secure, maintainable feature delivery. Built and refined ETL patterns to prepare financial and operational data for reporting and visualization. Developed interactive dashboards making complex financial insights approachable for business users. Mentored peers on code quality, architecture patterns, and testability while taking ownership of critical production issues.",
     logo: "N",
     logoAlt: "NETSOL Technologies logo",
     companyColor: "#0066CC"
   },
   {
-    id: "freelance",
-    company: "Freelance",
-    role: "Tech Consultant (Full-Stack + Mentoring)",
-    period: "Feb 2021 - Present",
-    description: "Delivered 100+ structured tutoring sessions on Angular, .NET, React, Python, and software architecture with a 4.9/5 rating. Built full-stack React + .NET Core analytics dashboards for Polix Analytics that reduced reporting time by 30%. Provided consulting on system design, architectural decisions, and performance optimization.",
-    logo: "F",
-    logoAlt: "Freelance logo",
-    companyColor: "#28A745"
-  },
-  {
     id: "pepsico",
     company: "PepsiCo",
     role: "Software Developer",
-    period: "May 2021 - Oct 2021",
-    description: "Automated internal supply chain workflows using React, reducing manual processes 15%. Converted business domain logic into technical requirements ensuring smooth UAT and stakeholder approval. Built tools for finance teams improving accuracy and speed of budget calculations.",
+    period: "May 2021 – Oct 2021",
+    description: "I worked on internal tools that automated manual finance and supply-chain tasks, helping business teams focus on analysis rather than repetitive processes. Built internal React tools to automate workflows and simplify complex Excel-based processes for finance teams. Acted as technical translator between finance stakeholders and engineering, turning requirements into reliable, testable features. Ran user-acceptance sessions and iterated on feedback to ensure usability and adoption.",
     logo: "P",
     logoAlt: "PepsiCo logo",
     companyColor: "#E32934"
+  },
+  {
+    id: "freelance",
+    company: "Freelance",
+    role: "Tech Consultant & Tutor",
+    period: "Feb 2021 – Present",
+    description: "I partner with startups and product teams to solve engineering and data challenges end-to-end. My work blends hands-on delivery, technical mentorship, and pragmatic architecture designed for maintainability and fast iteration. Coached engineers and product teams through system design, code quality, and deployment practices. Designed and delivered full-stack analytics dashboards and data pipelines surfacing actionable insights for non-technical stakeholders. Created tailored learning plans helping developers communicate ideas clearly and prepare for interviews with confidence.",
+    logo: "FL",
+    logoAlt: "Freelance logo",
+    companyColor: "#28A745"
   }
 ];
 
@@ -128,20 +138,6 @@ export default function Experience() {
                   </motion.p>
                 </div>
               </div>
-
-              {/* Hover Border Effect */}
-              <div
-                className="absolute inset-0 rounded-2xl border-2 border-transparent transition-all duration-300 group-hover:border-opacity-30"
-                style={{ borderColor: experience.companyColor }}
-              />
-
-              {/* Bottom Right Accent */}
-              <motion.div
-                className="absolute bottom-4 right-4 h-2 w-2 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-60"
-                style={{ backgroundColor: experience.companyColor }}
-                whileHover={{ scale: 1.5 }}
-                transition={{ duration: 0.2 }}
-              />
             </motion.div>
           ))}
         </div>
