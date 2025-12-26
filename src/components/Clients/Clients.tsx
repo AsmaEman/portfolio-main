@@ -1,6 +1,13 @@
 import { motion } from "motion/react";
 import { useCursorHover } from "../../hooks/useCursorHover";
 
+// Import client logos
+import pepsiLogo from "../../assets/clients/pepsi.svg";
+import preplyLogo from "../../assets/clients/preply.svg";
+import tamimiLogo from "../../assets/clients/tamimi.svg";
+import allicaLogo from "../../assets/clients/allica.svg";
+import ikeaLogo from "../../assets/clients/ikea.svg";
+
 interface ClientType {
   name: string;
   logo: string;
@@ -10,27 +17,27 @@ interface ClientType {
 const clientsData: ClientType[] = [
   {
     name: "Pepsi",
-    logo: "/src/assets/clients/pepsi.svg",
+    logo: pepsiLogo,
     alt: "Pepsi logo"
   },
   {
     name: "Preply",
-    logo: "/src/assets/clients/preply.svg",
+    logo: preplyLogo,
     alt: "Preply logo"
   },
   {
     name: "Tamimi Group",
-    logo: "/src/assets/clients/tamimi.svg",
+    logo: tamimiLogo,
     alt: "Tamimi Group logo"
   },
   {
     name: "Allica Bank",
-    logo: "/src/assets/clients/allica.svg",
+    logo: allicaLogo,
     alt: "Allica Bank logo"
   },
   {
     name: "IKEA",
-    logo: "/src/assets/clients/ikea.svg",
+    logo: ikeaLogo,
     alt: "IKEA logo"
   }
 ];

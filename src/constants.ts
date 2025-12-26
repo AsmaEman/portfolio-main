@@ -1,5 +1,11 @@
 import { ProjectType } from "./types/project";
 
+// Import images
+import ukrify from "./assets/ukrify.png";
+import quickquiz1 from "./assets/quickquiz1.png";
+import resumeLight from "./assets/resumeLight.png";
+import portfolio from "./assets/portfolio.png";
+
 export const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 export const linksInfo = [
@@ -11,7 +17,7 @@ export const linksInfo = [
 
 export const projectsData: ProjectType[] = [
   {
-    imgSrc: "src/assets/ukrify.png",
+    imgSrc: ukrify,
     imgAlt: "Carpools Community Carpooling Platform banner",
     number: 1,
     title: "Carpools - Community Carpooling Platform",
@@ -32,7 +38,7 @@ export const projectsData: ProjectType[] = [
     }
   },
   {
-    imgSrc: "src/assets/quickquiz1.png",
+    imgSrc: quickquiz1,
     imgAlt: "Mufradat Arabic Learning Platform screenshot",
     number: 2,
     title: "Mufradat - Arabic Vocabulary Learning Platform",
@@ -53,7 +59,7 @@ export const projectsData: ProjectType[] = [
     }
   },
   {
-    imgSrc: "src/assets/resumeLight.png",
+    imgSrc: resumeLight,
     imgAlt: "Quantum Intelligence Console screenshot",
     number: 3,
     title: "Quantum Intelligence Console (QIC)",
@@ -67,7 +73,7 @@ export const projectsData: ProjectType[] = [
     }
   },
   {
-    imgSrc: "src/assets/portfolio.png",
+    imgSrc: portfolio,
     imgAlt: "Large-Scale Financial Dashboard screenshot",
     number: 4,
     title: "Large-Scale Financial Dashboard",

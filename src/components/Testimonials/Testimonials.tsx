@@ -1,6 +1,11 @@
 import { motion } from "motion/react";
 import { useCursorHover } from "../../hooks/useCursorHover";
 
+// Import testimonial avatars
+import sarahAvatar from "../../assets/testimonials/sarah.jpg";
+import michaelAvatar from "../../assets/testimonials/michael.jpg";
+import davidAvatar from "../../assets/testimonials/david.jpg";
+
 interface TestimonialType {
   id: string;
   name: string;
@@ -16,7 +21,7 @@ const testimonialsData: TestimonialType[] = [
     name: "Sarah Ahmed",
     role: "Engineering Manager at NETSOL",
     testimonial: "Asma consistently delivered high-quality frontend solutions that improved our platform's performance by 30%. Her expertise in Angular and ability to mentor junior developers made her an invaluable team member.",
-    avatar: "/src/assets/testimonials/sarah.jpg",
+    avatar: sarahAvatar,
     isHighlighted: false
   },
   {
@@ -24,7 +29,7 @@ const testimonialsData: TestimonialType[] = [
     name: "Michael Chen",
     role: "CTO at Polix Analytics",
     testimonial: "Working with Asma on our React + .NET Core analytics dashboard was exceptional. She reduced our reporting time by 30% and delivered exactly what we needed. Her technical skills and communication are top-notch.",
-    avatar: "/src/assets/testimonials/michael.jpg",
+    avatar: michaelAvatar,
     isHighlighted: true
   },
   {
@@ -32,7 +37,7 @@ const testimonialsData: TestimonialType[] = [
     name: "David Rodriguez",
     role: "Tech Lead at PepsiCo",
     testimonial: "Asma's work on automating our supply chain workflows was impressive. She quickly understood our business requirements and delivered solutions that reduced manual processes by 15%. Highly recommended!",
-    avatar: "/src/assets/testimonials/david.jpg",
+    avatar: davidAvatar,
     isHighlighted: false
   }
 ];

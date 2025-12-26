@@ -6,5 +6,6 @@ import svgr from 'vite-plugin-svgr';
 // https://vite.dev/config/
 export default defineConfig({
 	plugins: [react(), tailwindcss(), svgr()],
-	base: '/portfolio',
+	// Remove base for Vercel deployment - only needed for GitHub Pages
+	// base: '/portfolio',
 });

@@ -2,6 +2,13 @@ import { motion } from "motion/react";
 import LinkIcon from "../../assets/link.svg?react";
 import { useCursorHover } from "../../hooks/useCursorHover";
 
+// Import images
+import quickquiz1 from "../../assets/quickquiz1.png";
+import ukrify from "../../assets/ukrify.png";
+import portfolio from "../../assets/portfolio.png";
+import quickquiz2 from "../../assets/quickquiz2.png";
+import resumeLight from "../../assets/resumeLight.png";
+
 interface MyProjectType {
   id: string;
   number: string;
@@ -20,7 +27,7 @@ const myProjectsData: MyProjectType[] = [
     number: "01",
     title: "Agent-less IoT Security: Network-Based Anomaly Detection",
     description: "Detecting anomalous behavior in IoT devices without installing endpoint agents. Traditional IoT security requires agents, which is infeasible for low-power or legacy hardware and creates a visibility gap. I built an agent-less IoT security pipeline that converts PCAP captures into engineered features, evaluates ML models (Random Forest chosen), and serves real-time attack classifications via a Flask dashboard. The system detects 4 attack types (DoS, SlowITe, Brute Force, Malformed) and achieved 93.55% F1-score — designed for practical deployability in legacy and regulated environments.",
-    image: "/src/assets/quickquiz1.png",
+    image: quickquiz1,
     link: "#",
     githubLinks: [
       "https://github.com/AsmaEman/Agentless-Iot-Security",
@@ -30,27 +37,38 @@ const myProjectsData: MyProjectType[] = [
     role: "Researcher & Developer"
   },
   {
-    id: "intelligent-inspection-system",
+    id: "ai-assisted-police-reporting",
     number: "02",
-    title: "Intelligent Inspection System (Fintech + IoT Context)",
-    description: "Led a 4-member engineering team to build a real-time inspection dashboard for field operations. Implemented 95% unit test coverage and automated E2E workflows with Cypress. Designed micro front-end patterns to scale modules independently. Tech Stack: Angular, .NET Core, SQL, Jest, Cypress",
-    image: "/src/assets/ukrify.png",
-    link: "#"
+    title: "AI-Powered Police Report Automation System",
+    description: "Developed an AI-powered police report automation system using NLP and ML to streamline law enforcement workflows. Implemented 5 ML models (DistilBERT, BERT) achieving 95% entity recognition accuracy and 92% penal code matching accuracy. Built full-stack application reducing report generation time by 77%. Processed CALCRIM legal database with 1000+ pages for automated code extraction.",
+    image: ukrify,
+    link: "#",
+    githubLinks: [
+      "https://github.com/AsmaEman/Report-Project",
+      "https://github.com/AsmaEman/ReportWebsite"
+    ],
+    technologies: ["Next.js", "React", "Python", "PyTorch", "Transformers", "Streamlit", "Tailwind CSS"],
+    role: "AI/ML Engineer & Full-Stack Developer"
   },
   {
-    id: "ai-assisted-police-reporting",
+    id: "ai-skin-cancer-detection",
     number: "03",
-    title: "AI-Assisted Police Reporting Platform",
-    description: "Built a modular reporting system with dynamic workflows reducing data-entry errors by 40%. Integrated custom GPT pipelines to auto-extract legal sections & penal codes, saving 20+ hours/month. Demonstrated application of intelligent systems in public-sector automation. Tech Stack: Next.js, Python APIs, ChatGPT Integration",
-    image: "/src/assets/portfolio.png",
-    link: "#"
+    title: "AI-Powered Skin Cancer Detection System",
+    description: "Developed AI-powered skin cancer detection system using deep learning to classify 7 types of skin lesions from dermatoscopic images. Trained CNN model on HAM10000 dataset (10,015 medical images) achieving 85.7% validation accuracy and 84.2% test accuracy. Implemented data augmentation pipeline to handle severe class imbalance, achieving 91.2% accuracy for melanocytic nevus detection. Built full-stack Flask web application with real-time prediction API. Reduced diagnosis time by 80% with sub-3-second inference.",
+    image: portfolio,
+    link: "#",
+    githubLinks: [
+      "https://github.com/AsmaEman/AI2018L_SkinCancerdetection_2021"
+    ],
+    technologies: ["Python", "TensorFlow", "Keras", "Flask", "NumPy", "Pandas", "OpenCV"],
+    role: "AI/ML Engineer & Medical AI Researcher"
   },
   {
     id: "large-scale-financial-dashboard",
     number: "04",
     title: "Large-Scale Financial Dashboard",
     description: "Designed a system to process and display large financial datasets in real-time. Applied caching strategies, query optimization, and data batching for high concurrency. Improved system stability and reduced response time by 25%.",
-    image: "/src/assets/quickquiz2.png",
+    image: quickquiz2,
     link: "#"
   },
   {
@@ -58,7 +76,7 @@ const myProjectsData: MyProjectType[] = [
     number: "05",
     title: "Algorithmic Optimization Project (Academic)",
     description: "Used graph algorithms, dynamic programming, and greedy strategies to optimize route planning and resource allocation. Implemented time-complexity analysis and performance tests using Python. Demonstrates foundation in algorithms.",
-    image: "/src/assets/resumeLight.png",
+    image: resumeLight,
     link: "#"
   }
 ];
