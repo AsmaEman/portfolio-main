@@ -7,8 +7,8 @@ export default function Logo({ color }: { color: string }) {
       }}
     >
       <img
-        src="/public/img/favicon196x196.png"
-        alt="Asma Eman Logo"
+        src="/public/img/favi.svg"
+        alt="Logo"
         className="w-12 h-12 md:w-14 md:h-14 rounded-lg"
         style={{ filter: color === 'white' ? 'brightness(0) invert(1)' : 'none' }}
       />
