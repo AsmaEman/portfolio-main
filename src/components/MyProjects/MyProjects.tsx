@@ -54,7 +54,7 @@ const myProjectsData: MyProjectType[] = [
   {
     id: "ai-skin-cancer-detection",
     number: "03",
-    title: "AI-Powered Skin Cancer Detection System",
+    title: "Skin Cancer Detection Using Deep Learning and Computer Vision",
     description: "Developed AI-powered skin cancer detection system using deep learning to classify 7 types of skin lesions from dermatoscopic images. Trained CNN model on HAM10000 dataset (10,015 medical images) achieving 85.7% validation accuracy and 84.2% test accuracy. Implemented data augmentation pipeline to handle severe class imbalance, achieving 91.2% accuracy for melanocytic nevus detection. Built full-stack Flask web application with real-time prediction API. Reduced diagnosis time by 80% with sub-3-second inference.",
     image: portfolio,
     link: "#",
@@ -201,8 +201,39 @@ export default function MyProjects() {
                     </svg>
                   </button>
 
+                  {/* Thesis Button - Only for IoT Security */}
+                  {project.id === "agentless-iot-security" && (
+                    <button
+                      onClick={() => {
+                        window.open("https://drive.google.com/file/d/11DSIiJYkXl_m9NUUoQ_9o6q4VbbIWYgU/view?usp=drive_link", '_blank');
+                      }}
+                      className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-blue-700 hover:scale-105"
+                      onMouseEnter={() => handleMouseEnter(80)}
+                      onMouseLeave={() => handleMouseLeave(40)}
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      <span>Thesis</span>
+                    </button>
+                  )}
+
                   {/* Blog Post Button */}
                   <button
+                    onClick={() => {
+                      let blogUrl = "#";
+                      if (project.id === "agentless-iot-security") {
+                        blogUrl = "https://dev.to/asma_eman/securing-iot-devices-without-agents-using-network-based-machine-learning-2emf";
+                      } else if (project.id === "ai-assisted-police-reporting") {
+                        blogUrl = "https://dev.to/asma_eman/automating-police-report-writing-using-nlp-and-machine-learning-89n";
+                      } else if (project.id === "ai-skin-cancer-detection") {
+                        blogUrl = "https://asmaeman.github.io/Asma/";
+                      }
+
+                      if (blogUrl !== "#") {
+                        window.open(blogUrl, '_blank');
+                      }
+                    }}
                     className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-white hover:text-black hover:scale-105"
                     onMouseEnter={() => handleMouseEnter(80)}
                     onMouseLeave={() => handleMouseLeave(40)}

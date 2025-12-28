@@ -1,7 +1,7 @@
 export default function ResumeLink({ isMenuOpen }: { isMenuOpen: boolean }) {
   return (
     <a
-      href="https://inttolong.github.io/Resume/"
+      href=""
       target="_blank"
       rel="noopener noreferrer"
       className={`group text-primary-white bg-primary-black hover:text-primary-black hover:bg-primary-white hover:shadow-bottom md:flex-center h-14 w-[153px] gap-2 rounded px-4 py-3 transition-all active:translate-y-1 md:border-2 ${isMenuOpen ? "flex-center" : "hidden"}`}
