@@ -1,12 +1,12 @@
 import SocialMedia from "./SocialMedia";
-import girl from "../../assets/girlWithLaptop.png";
+import girl from "../../assets/girlWithLaptop.webp";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "motion/react";
 import OptimizedImage from "../UI/OptimizedImage";
 
 export default function Hero() {
   return (
-    <div className="flex-center bg-primary-white flex-col-reverse justify-evenly px-4 sm:px-6 md:flex-row md:px-20 md:pt-10 lg:px-28">
+    <section className="flex-center bg-primary-white flex-col-reverse justify-evenly px-4 py-8 sm:px-6 md:flex-row md:px-20 md:py-10 lg:px-28 relative z-10">
       <motion.section
         className="flex flex-col gap-8 md:w-1/2"
         initial={{ x: -200, opacity: 0 }}
@@ -57,20 +57,22 @@ export default function Hero() {
       </motion.section>
 
       <motion.div
-        className="flex-center md:w-1/2"
+        className="flex-center md:w-1/2 relative"
         initial={{ x: 200, opacity: 0 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 3, type: "spring" }}
         viewport={{ once: true }}
       >
-        <OptimizedImage
-          src={girl}
-          alt="girl with laptop"
-          className="max-h-[750px] pb-8 sm:w-[539px] xl:w-630"
-          loading="eager"
-          priority={true}
-        />
+        <div className="max-h-[750px] pb-8 sm:w-[539px] xl:w-630 relative">
+          <OptimizedImage
+            src={girl}
+            alt="girl with laptop"
+            className="w-full h-auto"
+            loading="eager"
+            priority={true}
+          />
+        </div>
       </motion.div>
-    </div>
+    </section>
   );
 }

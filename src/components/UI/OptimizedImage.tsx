@@ -82,13 +82,13 @@ export default function OptimizedImage({
   `)}`;
 
   return (
-    <div ref={containerRef} className={`relative ${className}`}>
+    <div ref={containerRef} className={className}>
       {/* Placeholder/Loading state */}
       {!isLoaded && !error && (
         <img
           src={placeholderSrc}
           alt=""
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-0' : 'opacity-100'
+          className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-0' : 'opacity-100'
             }`}
           aria-hidden="true"
         />
@@ -102,7 +102,7 @@ export default function OptimizedImage({
           loading={loading}
           style={style}
           className={`w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
+            } ${!isLoaded ? 'absolute inset-0' : ''}`}
           onLoad={handleLoad}
           onError={handleError}
           onMouseEnter={onMouseEnter}
@@ -114,7 +114,7 @@ export default function OptimizedImage({
 
       {/* Error state */}
       {error && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white">
           <div className="text-center">
             <div className="text-lg font-bold">
               {alt.includes('avatar') ?
@@ -128,7 +128,7 @@ export default function OptimizedImage({
 
       {/* Loading indicator */}
       {!isLoaded && !error && isInView && (
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
         </div>
       )}

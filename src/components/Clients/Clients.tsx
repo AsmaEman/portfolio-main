@@ -3,12 +3,12 @@ import { useCursorHover } from "../../hooks/useCursorHover";
 import OptimizedImage from "../UI/OptimizedImage";
 
 // Import client logos
-import pepsiLogo from "../../assets/clients/pepsi.svg";
-import preplyLogo from "../../assets/clients/preply.png";
-import tamimiLogo from "../../assets/clients/Tamimi.png";
-import allicaLogo from "../../assets/clients/allica.svg";
-import ikeaLogo from "../../assets/clients/ikea.svg";
-import ikanoLogo from "../../assets/clients/Ikano.svg";
+import pepsiLogo from "../../assets/clients/pepsi.webp";
+import preplyLogo from "../../assets/clients/preply.webp";
+import tamimiLogo from "../../assets/clients/Tamimi.webp";
+import allicaLogo from "../../assets/clients/allica.webp";
+import ikeaLogo from "../../assets/clients/ikea.webp";
+import ikanoLogo from "../../assets/clients/Ikano.webp";
 
 interface ClientType {
   name: string;

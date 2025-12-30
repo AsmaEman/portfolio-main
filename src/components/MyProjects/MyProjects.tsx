@@ -4,9 +4,9 @@ import { useCursorHover } from "../../hooks/useCursorHover";
 import OptimizedImage from "../UI/OptimizedImage";
 
 // Import images
-import quickquiz1 from "../../assets/Gem2.png";
-import ukrify from "../../assets/Gem1.png";
-import portfolio from "../../assets/Gem3.png";
+import quickquiz1 from "../../assets/Gem2.webp";
+import ukrify from "../../assets/Gem1.webp";
+import portfolio from "../../assets/Gem3.webp";
 // Commented out unused imports
 // import quickquiz2 from "../../assets/quickquiz2.png";
 // import resumeLight from "../../assets/resumeLight.png";

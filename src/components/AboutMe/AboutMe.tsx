@@ -1,4 +1,4 @@
-import girl from "../../assets/girl.png";
+import girl from "../../assets/girl.webp";
 import { useCursorHover } from "../../hooks/useCursorHover";
 import { motion } from "motion/react";
 import OptimizedImage from "../UI/OptimizedImage";
