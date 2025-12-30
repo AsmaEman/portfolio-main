@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import LinkIcon from "../../assets/link.svg?react";
 import { useCursorHover } from "../../hooks/useCursorHover";
+import OptimizedImage from "../UI/OptimizedImage";
 
 // Import images
 import quickquiz1 from "../../assets/Gem2.png";
@@ -115,11 +116,11 @@ export default function MyProjects() {
               {/* Project Image */}
               <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <div className="relative overflow-hidden rounded-2xl">
-                  <img
+                  <OptimizedImage
                     src={project.image}
                     alt={project.title}
-                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                    loading="lazy"
                     onMouseEnter={() => handleMouseEnter(150)}
                     onMouseLeave={() => handleMouseLeave(40)}
                   />

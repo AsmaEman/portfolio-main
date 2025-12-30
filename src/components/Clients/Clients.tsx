@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useCursorHover } from "../../hooks/useCursorHover";
+import OptimizedImage from "../UI/OptimizedImage";
 
 // Import client logos
 import pepsiLogo from "../../assets/clients/pepsi.svg";
@@ -93,11 +94,11 @@ export default function Clients() {
                 onMouseEnter={() => handleMouseEnter(150)}
                 onMouseLeave={() => handleMouseLeave(40)}
               >
-                <img
+                <OptimizedImage
                   src={client.logo}
                   alt={client.alt}
-                  loading="lazy"
                   className="max-h-full max-w-full object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                  loading="lazy"
                 />
               </div>
             </div>

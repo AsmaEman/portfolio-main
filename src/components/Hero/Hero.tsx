@@ -2,18 +2,9 @@ import SocialMedia from "./SocialMedia";
 import girl from "../../assets/girlWithLaptop.png";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "motion/react";
-import { useState, useEffect } from "react";
+import OptimizedImage from "../UI/OptimizedImage";
 
 export default function Hero() {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  // Preload critical hero image
-  useEffect(() => {
-    const img = new Image();
-    img.src = girl;
-    img.onload = () => setImageLoaded(true);
-  }, []);
-
   return (
     <div className="flex-center bg-primary-white flex-col-reverse justify-evenly px-4 sm:px-6 md:flex-row md:px-20 md:pt-10 lg:px-28">
       <motion.section
@@ -66,28 +57,18 @@ export default function Hero() {
       </motion.section>
 
       <motion.div
-        className="flex-center md:w-1/2 relative"
+        className="flex-center md:w-1/2"
         initial={{ x: 200, opacity: 0 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 3, type: "spring" }}
         viewport={{ once: true }}
       >
-        {/* Loading placeholder */}
-        {!imageLoaded && (
-          <div className="max-h-[750px] pb-8 sm:w-[539px] xl:w-630 bg-gray-200 animate-pulse rounded-lg flex items-center justify-center">
-            <div className="text-gray-400">Loading...</div>
-          </div>
-        )}
-
-        {/* Actual image */}
-        <img
+        <OptimizedImage
           src={girl}
           alt="girl with laptop"
-          fetchPriority="high"
+          className="max-h-[750px] pb-8 sm:w-[539px] xl:w-630"
           loading="eager"
-          className={`max-h-[750px] pb-8 sm:w-[539px] xl:w-630 transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0 absolute'
-            }`}
-          onLoad={() => setImageLoaded(true)}
+          priority={true}
         />
       </motion.div>
     </div>

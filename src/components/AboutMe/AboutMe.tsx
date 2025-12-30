@@ -1,32 +1,23 @@
 import girl from "../../assets/girl.png";
 import { useCursorHover } from "../../hooks/useCursorHover";
 import { motion } from "motion/react";
-import { useState } from "react";
+import OptimizedImage from "../UI/OptimizedImage";
 
 export default function AboutMe() {
   const { handleMouseEnter, handleMouseLeave } = useCursorHover();
-  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <section
       className="bg-primary-black flex flex-col gap-10 px-4 py-5 sm:p-6 md:p-20 lg:flex-row lg:px-28"
       id="about"
     >
-      <div className="flex-center lg:w-1/2 relative">
-        {/* Loading placeholder */}
-        {!imageLoaded && (
-          <div className="w-full h-96 bg-gray-800 animate-pulse rounded-lg flex items-center justify-center">
-            <div className="text-gray-500">Loading...</div>
-          </div>
-        )}
-
-        {/* Actual image */}
-        <img
+      <div className="flex-center lg:w-1/2">
+        <OptimizedImage
           src={girl}
           alt="girl illustration"
+          className="max-w-full h-auto"
           loading="lazy"
-          className={`transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0 absolute'
-            }`}
-          onLoad={() => setImageLoaded(true)}
+          onMouseEnter={() => handleMouseEnter(150)}
+          onMouseLeave={() => handleMouseLeave(40)}
         />
       </div>
       <div className="lg:w-1/2">

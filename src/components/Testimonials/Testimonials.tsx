@@ -1,16 +1,12 @@
 import { motion } from "motion/react";
 import { useCursorHover } from "../../hooks/useCursorHover";
 
-// Import testimonial avatars
-import sarahAvatar from "../../assets/testimonials/sarah.jpg";
-import michaelAvatar from "../../assets/testimonials/michael.jpg";
-
 interface TestimonialType {
   id: string;
   name: string;
   role: string;
   testimonial: string;
-  avatar: string;
+  initials: string;
   isHighlighted?: boolean;
 }
 
@@ -20,7 +16,7 @@ const testimonialsData: TestimonialType[] = [
     name: "Sidra Cheema",
     role: "Project Manager",
     testimonial: "I had the pleasure of working with Asma Eman on contractual projects where she excelled as both a front-end and Python developer. Asma demonstrated remarkable commitment, a strong work ethic, and an exceptional ability to take feedback constructively. Whether working independently or as part of a team, she consistently delivered high-quality results. Her technical skills and collaborative spirit made her an invaluable asset to our projects. I highly recommend Asma for any role that requires dedication, adaptability, and technical expertise.",
-    avatar: sarahAvatar,
+    initials: "SC",
     isHighlighted: false
   },
   {
@@ -28,7 +24,7 @@ const testimonialsData: TestimonialType[] = [
     name: "Ahmed Khalid",
     role: "Tech Lead ",
     testimonial: "During her time with us, Asma consistently demonstrated strong technical ability and professional maturity. She designed and implemented .NET C# REST APIs and integrated them seamlessly with our Angular frontend for a mission-critical asset management product. Her ETL improvements reduced processing bottlenecks and her dashboard work helped non-technical stakeholders explore financial data independently and confidently. Asma approaches problems with curiosity and persistence, communicates clearly across teams, and reliably follows projects through to completion. I wholeheartedly endorse her for any engineering role.",
-    avatar: michaelAvatar,
+    initials: "AK",
     isHighlighted: true
   }
 ];
@@ -90,24 +86,9 @@ export default function Testimonials() {
                 >
                   <div className="relative">
                     <div className="h-20 w-20 overflow-hidden rounded-full border-4 border-gray-200">
-                      <img
-                        src={testimonial.avatar}
-                        alt={`${testimonial.name} avatar`}
-                        className="h-full w-full object-cover"
-                        onError={(e) => {
-                          // Fallback to a colored circle with initials if image fails
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.innerHTML = `
-                              <div class="h-full w-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl">
-                                ${testimonial.name.split(' ').map(n => n[0]).join('')}
-                              </div>
-                            `;
-                          }
-                        }}
-                      />
+                      <div className="h-full w-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl">
+                        {testimonial.initials}
+                      </div>
                     </div>
                     {/* Quote bubble */}
                     <div className={`absolute -bottom-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold ${testimonial.isHighlighted
