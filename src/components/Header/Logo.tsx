@@ -15,7 +15,6 @@ export default function Logo({ color }: { color: string }) {
         loading="eager"
         priority={true}
         style={{ filter: color === 'white' ? 'brightness(0) invert(1)' : 'none' }}
-        placeholder="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iOCIgZmlsbD0iIzMzMzMzMyIvPgo8L3N2Zz4K"
       />
     </div>
   );

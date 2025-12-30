@@ -6,7 +6,6 @@ interface OptimizedImageProps {
   className?: string;
   loading?: 'lazy' | 'eager';
   priority?: boolean;
-  placeholder?: string;
   onLoad?: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
@@ -19,7 +18,6 @@ export default function OptimizedImage({
   className = '',
   loading = 'lazy',
   priority = false,
-  placeholder,
   onLoad,
   onMouseEnter,
   onMouseLeave,
@@ -71,29 +69,8 @@ export default function OptimizedImage({
     setError(true);
   };
 
-  // Create a low-quality placeholder
-  const placeholderSrc = placeholder || `data:image/svg+xml;base64,${btoa(`
-    <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-      <rect width="100%" height="100%" fill="#f3f4f6"/>
-      <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14">
-        Loading...
-      </text>
-    </svg>
-  `)}`;
-
   return (
     <div ref={containerRef} className={className}>
-      {/* Placeholder/Loading state */}
-      {!isLoaded && !error && (
-        <img
-          src={placeholderSrc}
-          alt=""
-          className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-0' : 'opacity-100'
-            }`}
-          aria-hidden="true"
-        />
-      )}
-
       {/* Actual image */}
       {isInView && !error && (
         <img
@@ -101,8 +78,8 @@ export default function OptimizedImage({
           alt={alt}
           loading={loading}
           style={style}
-          className={`w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'
-            } ${!isLoaded ? 'absolute inset-0' : ''}`}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
           onLoad={handleLoad}
           onError={handleError}
           onMouseEnter={onMouseEnter}
@@ -112,24 +89,17 @@ export default function OptimizedImage({
         />
       )}
 
-      {/* Error state */}
+      {/* Error state - only for avatars, show initials */}
       {error && (
         <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white">
           <div className="text-center">
             <div className="text-lg font-bold">
               {alt.includes('avatar') ?
                 alt.split(' ')[0]?.charAt(0) + (alt.split(' ')[1]?.charAt(0) || '') :
-                '?'
+                '⚠️'
               }
             </div>
           </div>
-        </div>
-      )}
-
-      {/* Loading indicator */}
-      {!isLoaded && !error && isInView && (
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
         </div>
       )}
     </div>
