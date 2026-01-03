@@ -36,32 +36,60 @@ export default function AboutMe() {
             transition={{ duration: 1, type: "spring" }}
             viewport={{ once: true }}
           >
-            I design and build software that bridges engineering, data, and product. My career spans product teams and freelance projects where I’ve focused on bringing structure to noisy operational data, creating APIs and ETL pipelines that power reliable dashboards, and shipping small, explainable ML signals that amplify human decision-making.
-            I enjoy the full lifecycle: from turning a fuzzy product question into measurable features, to implementing pragmatic pipelines and dashboards, to iterating with users until the solution actually helps them do their job. That means thinking about architecture and testability, but also about clarity models and metrics should be understandable and actionable by the people who rely on them.
-
+            I build things full-stack APIs that don't break under pressure, dashboards that people actually want to use, and ML features that help humans make better decisions without replacing them. Think: smart alerting that cuts through noise, prioritization systems that learn what matters, recommendations that feel helpful (not creepy).
           </motion.p>
-          <motion.p
+          <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 2, type: "spring" }}
             viewport={{ once: true }}
           >
-            As a freelancer I pair hands-on delivery with mentoring and knowledge transfer so teams can own and evolve what we build together. I like small, focused AI features that improve workflows (prioritization, alerting, recommendations) rather than ambitious end-to-end automation the goal is to amplify people, reduce toil, and make systems more trustworthy.
-          </motion.p>
-          <motion.p
+            <p className="mb-2"><strong>What I'm really good at:</strong></p>
+            <ul className="list-disc list-inside space-y-1 ml-4">
+              <li>Making AI explainable to the people who need to trust it</li>
+              <li>Building data pipelines that don't mysteriously fail at 3 AM</li>
+              <li>Shipping small, focused features that compound into big improvements</li>
+              
+              <li>Turning "the model says X" into "here's why, and here's what to do about it"</li>
+            </ul>
+          </motion.div>
+          <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 3, type: "spring" }}
             viewport={{ once: true }}
           >
-            What I do (services / focus areas)
-            •	Full-stack product engineering (frontend, backend, APIs)
-            •	Data & event pipelines, feature engineering for analytics and ML
-            •	AI-assisted tooling: small, explainable models that fit operational workflows
-            •	Internal dashboards and observability surfaces for non-technical stakeholders
-            •	Technical mentoring, code quality, and developer enablement
+            <p className="mb-2"><strong>What I believe:</strong></p>
+            <p>
+              The best software doesn't try to automate everything it amplifies human expertise. Models should be understandable. Data should be reliable. And "it works" isn't good enough if nobody knows <em>how</em> it works.
+            </p>
+          </motion.div>
 
-          </motion.p>
+          {/* Video Section */}
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 4, type: "spring" }}
+            viewport={{ once: true }}
+            className="mt-6"
+          >
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                // Replace with actual Google Drive link for Reachout.mp4
+                window.open("https://drive.google.com/file/d/YOUR_VIDEO_ID/view?usp=drive_link", '_blank');
+              }}
+              className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-gray-200 hover:scale-105"
+              onMouseEnter={() => handleMouseEnter(80)}
+              onMouseLeave={() => handleMouseLeave(40)}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              
+            </a>
+          </motion.div>
         </article>
       </div>
     </section>

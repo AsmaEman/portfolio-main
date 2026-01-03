@@ -64,10 +64,10 @@ export default function Clients() {
         viewport={{ once: true }}
         className="mb-10 text-center text-[28px]/[114%] tracking-tight lg:text-[48px]/[114%]"
       >
-        <span className="pr-2 md:pr-4">My</span>
-        <span className="font-extrabold">Clients</span>
-      </motion.h2>
+        <span className="pr-2 md:pr-4">Clients</span>
 
+      </motion.h2>
+  {/*<!-- <span className="font-extrabold">I Worked For</span> -->*/}
       {/* Horizontal Sliding Container */}
       <div className="relative overflow-hidden">
         <motion.div

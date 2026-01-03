@@ -98,7 +98,7 @@ export default function MyProjects() {
           viewport={{ once: true }}
           className="mb-16 text-center text-4xl font-normal text-white md:text-5xl lg:text-6xl"
         >
-          My <span className="font-bold">Case Studies</span>
+          Research and <span className="font-bold">Case Studies</span>
         </motion.h2>
 
         {/* Projects Grid */}
