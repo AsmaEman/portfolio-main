@@ -1,4 +1,5 @@
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Bootcamps from "./components/Bootcamps/Bootcamps";
 import Clients from "./components/Clients/Clients";
@@ -36,6 +37,7 @@ function App() {
         <Footer />
       </div>
       <Cursor />
+      <Analytics />
     </CursorProvider>
   );
 }
